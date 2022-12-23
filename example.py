@@ -18,8 +18,8 @@ def main():
 
     props = yarp.Property()
     props.put('device', 'gazecontrollerclient');
-    props.put('local', '/example/gaze')
-    props.put('remote', '/' + robot_name + '/gazecontroller')
+    props.put('remote', '/iKinGazeCtrl')
+    props.put('local', '/' + robot_name + '/gazecontroller')
     gaze_driver = yarp.PolyDriver(props)
     if not gaze_driver:
         print('Cannot open the gaze driver.')
